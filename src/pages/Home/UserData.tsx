@@ -68,7 +68,6 @@ function UserData() {
           />
         </div>
       </div>
-      {/*situation matrimoniale (select),  nombre enfant et nombre de femme} */}
       <div className="form-data flex gap-8 custom:flex-col">
         <div className="form-group w-full mt-4">
           <label
