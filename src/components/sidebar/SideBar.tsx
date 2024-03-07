@@ -5,6 +5,7 @@ import { FaRegUser } from "react-icons/fa6";
 import { MdLogout } from "react-icons/md";
 import { Fragment, useEffect, useState } from "react";
 import user from "../../assets/images/770137_man_512x512.png";
+import { RiCloseLine } from "react-icons/ri";
 
 function SideBar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -46,22 +47,29 @@ function SideBar() {
               <FaRegSmile className="text-green-600" /> KayFay
             </h2>
           </div>
-          <div className="lg:hidden cursor-pointer" onClick={toggleSidebar}>
-            <svg
-              className="w-10 h-10"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </div>
+          {!isSidebarOpen ? (
+            <div className="lg:hidden cursor-pointer" onClick={toggleSidebar}>
+              <svg
+                className="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </div>
+          ) : (
+            <RiCloseLine
+              className="lg:hidden cursor-pointer w-10 h-10"
+              onClick={toggleSidebar}
+            />
+          )}
         </div>
       )}
 
