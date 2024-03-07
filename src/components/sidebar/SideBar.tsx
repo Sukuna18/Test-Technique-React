@@ -77,7 +77,7 @@ function SideBar() {
         className={`relative bg-white w-full md:w-[25%] h-full min-h-screen p-10 ${
           isSidebarOpen
             ? "absolute z-[1000] lg:static transition-all duration-500 ease-in-out right-0"
-            : "hidden md:block lg:block lg:relative transition-all duration-500 ease-in-out"
+            : "hidden md:block lg:block lg:static transition-all duration-500 ease-in-out"
         } ${isSidebarOpen ? "no-scroll" : ""}`}
       >
         <div className="title">
