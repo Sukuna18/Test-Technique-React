@@ -66,7 +66,7 @@ function SideBar() {
       )}
 
       <div
-        className={`container relative bg-white w-full md:w-[25%] h-full min-h-screen p-10 ${
+        className={`relative bg-white w-full md:w-[25%] h-full min-h-screen p-10 ${
           isSidebarOpen
             ? "absolute lg:static transition-all duration-500 ease-in-out right-0"
             : "hidden md:block lg:block lg:relative transition-all duration-500 ease-in-out"

@@ -4,7 +4,7 @@ import Header from "../components/header/Header";
 
 const MainLayout = () => {
   return (
-    <div className="flex custom:flex-col gap-8">
+    <div className="flex custom:flex-col gap-8 ">
       <SideBar />
       <div>
         <Header />

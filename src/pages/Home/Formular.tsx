@@ -6,14 +6,14 @@ const Formular = () => {
   return (
     <div className="formular h-auto bg-white w-full mt-10 rounded-lg mb-6">
       <div className="heading flex gap-10 p-4">
-        <p className="text-2xl font-semibold flex items-center gap-2 cursor-pointer">
+        <p className="text-2xl custom:text-base font-semibold flex items-center gap-2 cursor-pointer">
           <span className="p-2 bg-green-100 rounded-full text-center">
             <FaRegUser className="text-sm text-green-500 font-bold" />
           </span>
           Information personnelles
         </p>
         <p className="w-1 h-auto opacity-20 bg-gray-500"></p>
-        <p className="text-gray-500 text-2xl flex items-center gap-2 cursor-pointer">
+        <p className="text-gray-500 text-2xl custom:text-base flex items-center gap-2 cursor-pointer">
           <MdAccountBalance />
           Coordonnées Bancaires
         </p>
