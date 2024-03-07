@@ -35,7 +35,7 @@ function SideBar() {
   return (
     <Fragment>
       {windowWidth < 768 && (
-        <div className="flex justify-around text-2xl items-center bg-white p-4 rounded-lg w-full">
+        <div className="flex z-[1000] justify-around text-2xl items-center bg-white p-4 rounded-lg w-full">
           <img
             src={user}
             alt=""
@@ -68,9 +68,9 @@ function SideBar() {
       <div
         className={`relative bg-white w-full md:w-[25%] h-full min-h-screen p-10 ${
           isSidebarOpen
-            ? "absolute lg:static transition-all duration-500 ease-in-out right-0"
+            ? "absolute z-[1000] lg:static transition-all duration-500 ease-in-out right-0"
             : "hidden md:block lg:block lg:relative transition-all duration-500 ease-in-out"
-        }`}
+        } ${isSidebarOpen ? "no-scroll" : ""}`}
       >
         <div className="title">
           <h2 className="flex gap-2 text-2xl items-center">
@@ -154,6 +154,7 @@ function SideBar() {
           </p>
         </div>
       </div>
+      {isSidebarOpen && <div className="dark-overlay"></div>}
     </Fragment>
   );
 }
